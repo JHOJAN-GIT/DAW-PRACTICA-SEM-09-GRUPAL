@@ -3,15 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 09 | Registro PHP</title>
+    <title>Formulario | UNCP</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h2>Formulario de Contacto (PHP)</h2>
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
 
-    <form action="procesar.php" method="POST">
-        <label>Nombre: <input type="text" name="nombre" maxlength="100" required></label><br><br>
-        <label>Correo: <input type="email" name="correo" maxlength="150" required></label><br><br>
-        <button type="submit">Enviar</button>
-    </form>
+    <header class="site-header">
+        <div class="brand">
+            <h1>Universidad Nacional del Centro del Perú<br>
+                <span>Facultad de Ingeniería de Sistemas · IS093A</span></h1>
+        </div>
+        <span class="badge">Lab 09 · PHP</span>
+    </header>
+
+    <main class="narrow">
+        <div class="card centro">
+            <h2>Registro de contacto</h2>
+            <p class="sub">Completa el formulario para guardar el contacto.</p>
+
+            <form class="contact-form" action="procesar.php" method="POST">
+                <div class="field">
+                    <label for="nombre">Nombre completo</label>
+                    <input id="nombre" type="text" name="nombre" maxlength="100" placeholder="Ej: Juan Pérez" required>
+                </div>
+                <div class="field">
+                    <label for="correo">Correo electrónico</label>
+                    <input id="correo" type="email" name="correo" maxlength="150" placeholder="ejemplo@correo.com" required>
+                </div>
+                <button class="btn btn-block" type="submit">Enviar registro →</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p><strong>Jhojan Manuel Antezana Villegas</strong></p>
+        <p>© 2026 · Todos los derechos reservados</p>
+        <p>Desarrollo de Aplicaciones Web · Práctica grupal Semana 09 · Huancayo, Perú</p>
+    </footer>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
